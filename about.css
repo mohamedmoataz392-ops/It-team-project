@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #1e1e1e;
+}
+
+nav h1 {
+  color: #e8000d;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#about-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+}
+
+#about-hero h2 {
+  font-size: 40px;
+  color: #e8000d;
+}
+
+#about-hero p {
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+#story {
+  padding: 50px 30px;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+#story h2 {
+  color: #e8000d;
+  margin-bottom: 15px;
+}
+
+#story p {
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+#values {
+  padding: 50px 30px;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+#values h2 {
+  color: #e8000d;
+  margin-bottom: 30px;
+}
+
+#values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.value-card {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 8px;
+  width: 180px;
+  border: 1px solid #333;
+}
+
+.value-card h3 {
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #888;
+}

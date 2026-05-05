@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="cars.css">
+  <title>Cars</title>
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="word">
+      <p>Choose Your Dream Car</p>
+    </div>
+    <header>
+      <a href="#" class="logo">Speedycars</a>
+      <ul>
+        <li><a href="index.html">Home</a>
+        </li>
+        <li><a href="index.htmk">BMW M5</a>
+        </li>
+        <li><a href="#">Save</a>
+        </li>
+        <li><a href="#">Reset</a>
+        </li>
+        <li><a href="#">Profile</a>
+        </li>
+      </ul>
+      <div class="select">
+        <select class="car-filter">
+          <option value="">SELECT CAR</option>
+          <option value="toyota">Toyota</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="bmw">BMW</option>
+        </select>
+        
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+      </div>
+    </header>
+    <div class="card">
+      <a href="toyota.html">Toyota Corolla</a>
+      <img src="https://www.carexpert.com.au/app/uploads/2023/06/2023-Toyota-Corolla-Hybrid-review-lead-1.jpg" alt="Toyota Corolla">
+      <h3>Toyota Corolla</h3>
+      <p class="price">1,500,000 EGP</p>
+      <div class="specs">
+        <p>Year: 2026</p>
+        <p>Distance: 0 km</p>
+        <span>Automatic</span>
+        <p><button type="buynow">Buy Now</button></p>
+      </div>
+    </div>
+    <div class="mercedes">
+      <img src="https://images.pistonheads.com/nimg/47876/2018-mercedes-benz-gt-c-roadster_2-800x600.jpg" alt="Mercedes">
+      <h3>Mercedes</h3>
+      <p class="price">550,000 EGP</p>
+      <div class="discreption">
+        <span>Year: 2026</span>
+        <p>Distance: 0 km</p>
+        <p>Automatic</p>
+        <p><button type="buynow">Buy Now</button></p>
+      </div>
+    </div>
+    <div class="top-image">
+      <img src="https://www.motortrend.com/uploads/2023/11/Best-Sports-Cars-2024.jpg" />
+    </div>
+    <div class="why">
+       <p><b>Why Choose Us?</b></p>
+      <span>We provide high-quality cars at the best prices,with trusted service and a smooth buying experience</span>
+    </div>
+    <div class="themes">
+     <button id="themes">themes</button>
+ </div>
+    </div>
+  
+  
+<script>
+const btn = document.getElementById("themes");
+
+btn.addEventListener("click", function() {
+  document.body.classList.toggle("dark");
+  
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+window.onload = function() {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+};
+</script>
+
+</body>
+
+</html>

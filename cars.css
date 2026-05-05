@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a{
+ color:#f59e0b;
+  text-decoration: none ;
+}
+body{
+  background: white;
+  color: #000;
+  transition: 0.3s;
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+}
+.dark{
+  background: black;
+  color: white;
+}
+.container{
+  
+  position: relative;
+/*  background-image: linear-gradient(to right, #01022de5 30%, #00000088);*/
+  width: 95%;
+  height: 1200px;
+  background-size: contain;
+}
+.container:hover{
+ background-image: 
+  linear-gradient(to right, #01022de5 30%, transparent),
+
+  
+ 
+}
+header{
+  display: flex ;
+  justify-content: space-between ;
+  align-content: center ;
+  padding: 10px ;
+}
+.logo{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+ul{
+  width:50%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+ul a{
+  border-bottom: 2px solid transparent ;
+}
+ul a:hover{
+  border-bottom-color: white;
+}
+.search{
+ display: flex;
+ gap:10px;
+}
+.search button{
+  background: skyblue;
+
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer ;
+}
+.card{
+
+  position: absolute;
+  top: 600px;
+  left: 20px;
+  background: rgb(255, 255, 255,0.1);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+/*.card button{
+  background-color: blue ;
+  padding: 2px;
+  margin-left: 2px;
+  color: white;
+} */
+.mercedes img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.mercedes {
+
+  position: absolute;
+  top: 600px;
+  left: 500px;
+  background: rgb(255, 255, 255,0.1);
+  padding: 45px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+.top-image img{
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  bottom: 100px;
+}
+.word p{
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+
+}
+.car-filter{
+  padding: 80x 12px;
+  font-display: 12px;
+  border-radius: 5px;
+}
+.why p{
+
+  margin-top: 600px;
+  font-size: 24px;
+  display: flex; 
+  justify-content: center;
+}
+.why span{
+
+  margin-top: 10px;
+  display: flex ;
+  justify-content: center;
+  display: inline;
+  word-spacing: 3px;
+}
+.themes {
+  position: absolute;
+  top: 30px;
+  left: 95%;
+  transform: translateX(-50%);
+}
+.themes button{
+  background: #f59e0b;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+}

@@ -1,0 +1,75 @@
+:root {
+    --bg: #f4f6f9;
+    --text: #000;
+    --card: #fff;
+    --main: #2c3e50;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: var(--bg);
+    color: var(--text);
+    direction: rtl;
+}
+header {
+    background: var(--main);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+.theme-btn {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    background: var(--card);
+    width: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+button {
+    padding: 10px;
+    border: none;
+    background: #27ae60;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.details {
+    display: none;
+    text-align: center;
+    padding: 40px;
+}
+.details-box {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 15px;
+    width: 350px;
+    margin: auto;
+}

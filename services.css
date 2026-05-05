@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #0b1c2c;
+    color: white;
+}
+header {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.hero {
+    height: 80vh;
+    background: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.services {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.highlight {
+    background: orange;
+    color: white;
+}
+button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkblue;
+}

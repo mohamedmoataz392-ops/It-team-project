@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
+}
+body.light {
+  background-color: #f5f5f5;
+  color: #111;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #1e1e1e;
+}
+
+body.light nav {
+  background-color: #ddd;
+}
+
+nav h1 {
+  color: #e8000d;
+  margin: 0;
+}
+
+
+
+nav button {
+  padding: 8px 15px;
+  background-color: #e8000d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#article {
+  position: relative;
+  text-align: center;
+}
+
+#article img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+#article-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#article-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+#article-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #e8000d;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#pages {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+#pages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #333;
+  font-size: 16px;
+}
+
+body.light .page-card {
+  background-color: #ddd;
+  color: #111;
+  border-color: #bbb;
+}
+
+.page-card:hover {
+  border-color: #e8000d;
+  color: #e8000d;
+}
+#why {
+  padding: 50px 30px;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+body.light #why {
+  background-color: #eaeaea;
+}
+
+#why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.why-card {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 8px;
+  width: 200px;
+  border: 1px solid #333;
+}
+
+body.light .why-card {
+  background-color: #ddd;
+  color: #111;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #888;
+}
+
+body.light footer {
+  background-color: #ddd;
+}
+#bmw-ad {
+  position: relative;
+  text-align: center;
+}
+#bmw-ad iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  opacity: 0.5;
+}
+
+#bmw-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#bmw-text h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+#bmw-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#engine-ad {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #1a1a1a;
+}
+
+#engine-ad h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#engine-ad p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+#engine-ad audio {
+  width: 300px;
+}

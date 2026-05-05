@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Our Team</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="contact-card">
+        <h2>We can help you by telling us your problem</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Mohamed Ali" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn">Send Message</button>
+        </form>
+        <div id="response-alert"></div>
+
+        <div class="footer-note">
+            <span class="highlight">Speedycars</span>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+</body>
+</html>
