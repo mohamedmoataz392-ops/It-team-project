@@ -405,59 +405,9 @@
             localStorage.setItem("theme", newTheme);
         }
 
-        // 3. التحقق من صحة النموذج بالـ JavaScript (Custom Validation)
-        function validateForm(event) {
-            event.preventDefault(); // إيقاف الإرسال الافتراضي
+        
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const carModel = document.getElementById("carModel").value;
-            const errorDiv = document.getElementById("error-message");
-
-            // قواعد التحقق المخصصة:
-            if (name.length < 3) {
-                errorDiv.textContent = "⚠️ خطأ: يجب أن يتكون الاسم من 3 أحرف على الأقل.";
-                return false;
-            }
-
-            if (!email.includes("@") || !email.includes(".")) {
-                errorDiv.textContent = "⚠️ خطأ: البريد الإلكتروني غير صالح.";
-                return false;
-            }
-
-            const phoneRegex = /^[0-9]{10}$/; // للتحقق من أرقام الهاتف فقط
-            if (!phoneRegex.test(phone)) {
-                errorDiv.textContent = "⚠️ خطأ: رقم الهاتف يجب أن يتكون من 10 أرقام فقط.";
-                return false;
-            }
-
-            if (carModel === "") {
-                errorDiv.textContent = "⚠️ خطأ: يرجى تحديد الموديل من القائمة.";
-                return false;
-            }
-
-            errorDiv.textContent = "";
-
-            // 4. الكتابة باستخدام التخزين المحلي (LocalStorage)
-            const reservationData = {
-                name: name,
-                email: email,
-                phone: phone,
-                carModel: carModel,
-                date: new Date().toLocaleDateString('ar-EG')
-            };
-            localStorage.setItem("lastReservation", JSON.stringify(reservationData));
-
-            alert("تم إرسال طلب تجربة القيادة بنجاح! شكراً لاختيارك.");
-            document.getElementById("bookingForm").reset();
-
-            // تحديث العرض بالطلب الجديد
-            document.getElementById("savedReservations").style.display = "block";
-            document.getElementById("reservationInfo").innerHTML = `تم حجز تجربة للمستخدم <b>${reservationData.name}</b> على سيارة <b>${reservationData.carModel}</b> بتاريخ ${reservationData.date}.`;
-        }
-
-        // 5. وظيفة فلترة السيارات
+    
         function filterCars() {
             alert("تم تطبيق الفلترة بنجاح (يمكنك ربطها بقاعدة بيانات لاحقاً).");
         }
