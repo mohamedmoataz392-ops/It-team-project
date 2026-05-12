@@ -1,70 +1,115 @@
-
 const cars = [
     {
-      id: "corolla",
-        name: "Toyota corolla",
-     price: "900,000 جنيه",
-  img: "https://via.placeholder.com/300x150",
-  warranty: "5 سنوات أو 150,000 كم\nيشمل المحرك وناقل الحركة"
+        name: "BMW",
+        price: "1,200,000 جنيه",
+        warranty: "ضمان 5 سنين أو 150,000 كم",
+        image: "https://images.unsplash.com/photo-1555215695-3004980ad54e"
     },
+
     {
-id: "elantra",
-  name: "Hyundai elentra",
-   price: "850,000 جنيه",
-   img: "https://via.placeholder.com/300x150",
-   warranty: "5 سنوات أو 100,000 كم\nيشمل الأنظمة الكهربائية"
+        name: "Mercedes",
+        price: "1,500,000 جنيه",
+        warranty: "ضمان 4 سنين",
+        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70"
     },
+
     {
-   id: "sportage",
-  name: "KIA sportage",
-   price: "1,200,000 جنيه",
-   img: "https://via.placeholder.com/300x150",
-    warranty: "6 سنوات أو 150,000 كم\nمساعدة على الطريق"
+        name: "Toyota",
+        price: "850,000 جنيه",
+        warranty: "ضمان 3 سنين",
+        image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7"
     }
 ];
-function loadCars() {
-    let container = document.getElementById("carsList");
-    container.innerHTML = "";
 
-  cars.forEach(car => {
- container.innerHTML += `
-  <div class="card">
- <img src="${car.img}">
- <div class="card-content">
- <h3>${car.name}</h3>
-  <p>${car.price}</p>
-      <button onclick="showDetails('${car.id}')">عرض الضمان</button>
-   </div>
-  </div>
-  `;
-    });
+
+const carsList = document.getElementById("carsList");
+
+const detailsPage = document.getElementById("detailsPage");
+
+const carName = document.getElementById("carName");
+
+const carPrice = document.getElementById("carPrice");
+
+const carWarranty = document.getElementById("carWarranty");
+
+
+for(let i = 0; i < cars.length; i++) {
+
+    carsList.innerHTML += `
+    
+    <div class="card">
+
+        <img src="${cars[i].image}">
+
+        <div class="card-content">
+
+            <h2>${cars[i].name}</h2>
+
+            <p>${cars[i].price}</p>
+
+            <button onclick="showDetails(${i})">
+                عرض الضمان
+            </button>
+
+        </div>
+
+    </div>
+
+    `;
 }
-function showDetails(id) {
-    let car = cars.find(c => c.id === id);
 
-    document.getElementById("carName").innerText = car.name;
-    document.getElementById("carPrice").innerText = car.price;
-    document.getElementById("carWarranty").innerText = car.warranty;
 
-    document.getElementById("carsList").style.display = "none";
-    document.getElementById("detailsPage").style.display = "block";
+
+function showDetails(index) {
+
+    carName.innerHTML = cars[index].name;
+
+    carPrice.innerHTML = cars[index].price;
+
+    carWarranty.innerHTML = cars[index].warranty;
+
+  
+    carsList.style.display = "none";
+
+  
+    detailsPage.style.display = "block";
 }
+
+
+
 function goBack() {
-    document.getElementById("detailsPage").style.display = "none";
-    document.getElementById("carsList").style.display = "flex";
+
+    detailsPage.style.display = "none";
+
+    carsList.style.display = "flex";
 }
-function setTheme(theme) {
-    if (theme === "dark") {
-        document.documentElement.style.setProperty('--bg', '#1e1e1e');
-        document.documentElement.style.setProperty('--text', '#fff');
-        document.documentElement.style.setProperty('--card', '#2c2c2c');
-        document.documentElement.style.setProperty('--main', '#000');
-    } else {
-        document.documentElement.style.setProperty('--bg', '#f4f6f9');
-        document.documentElement.style.setProperty('--text', '#000');
-        document.documentElement.style.setProperty('--card', '#fff');
-        document.documentElement.style.setProperty('--main', '#2c3e50');
+
+
+
+function toggleTheme() {
+
+    const root = document.documentElement;
+
+   
+    if(root.style.getPropertyValue("--bg") != "black") {
+
+        root.style.setProperty("--bg", "black");
+
+        root.style.setProperty("--text", "white");
+
+        root.style.setProperty("--card", "#222");
+
     }
+
+    else {
+
+        root.style.setProperty("--bg", "#f4f6f9");
+
+        root.style.setProperty("--text", "black");
+
+        root.style.setProperty("--card", "white");
+    }
+}
 
     localStorage.setItem("theme", theme);
 }
